@@ -4,13 +4,13 @@ const PokeSearchBar = styled.div` {
     margin: 0 auto;
     width: 480px;
     height: 24px;
+    margin: 24px auto;
     padding: 16px;
     background-color: #f5f5f5;
     border-radius: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 24px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }`;
 

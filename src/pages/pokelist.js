@@ -8,18 +8,17 @@ import PokeCard from '../components/pagecomponents/PokeCard';
 import PokeLoadingGif from '../components/pagecomponents/PokeLoading';
 
 const Container = styled.div` {
-  background-color: #fefefe;
-  padding: 40px;
-  margin: 0 auto;
   text-shadow: 2px 2px 3px #000000;
   font-family: sans-serif;
+  justify-items: center;
+  padding: 0px;
 }`;
 
 const CardWrapper = styled.div` {
-  padding-inline-start: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
   grid-gap: 20px;
+  justify-items: center;
 }`;
 
 export default function PokeList() {
@@ -32,7 +31,6 @@ export default function PokeList() {
     const [searchValue, setSearchValue] = useState("");
     const getFilteredPokemon = () => data.getAllPokemon.filter((pokemon)=>
                                      pokemon.key.toLowerCase().includes(searchValue.toLowerCase()))
-                                     console.log(searchValue);
     if (loading) return <PokeLoadingGif/>;
     if (error) return <p>Error : {error.message}</p>;
     

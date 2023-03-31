@@ -17,7 +17,7 @@ import BreedingData from '../components/detailscomponents/BreedingData';
 import PokeLoadingGif from '../components/pagecomponents/PokeLoading';
 
 const Container = styled.div` {
-    padding: 40px;
+    padding: 0px;
     text-shadow: 2px 2px 3px #000000;
     font-family: helvetica;
     background-color: #fefefe;
@@ -101,6 +101,7 @@ const DetailsContaiinerWrap = styled.div`{
 }`
 
 const ContainerBackground = styled.div`{
+  padding: 40px;
   color: white;
 }`
 
