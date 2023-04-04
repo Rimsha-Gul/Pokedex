@@ -91,6 +91,10 @@ const DetailsContainer = styled.div`{
   width: 600px;
   background-image: linear-gradient(to bottom right, ${(props) => props.color1 ? Colors(props.color1) : "#ffd015"}, 
   ${(props) => props.color2 ? Colors(props.color2) : "#ffd015"});
+
+  @media screen and (max-width: 767px) {
+    width: 700px;
+  }
 }`;
 
 const DetailsContaiinerWrap = styled.div`{
@@ -98,11 +102,24 @@ const DetailsContaiinerWrap = styled.div`{
 	display: flex;
 	flex-direction: row;
   gap: 20px;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+		flex-direction: column;
+    justify-content: center;
+  }
 }`
 
 const ContainerBackground = styled.div`{
   padding: 40px;
   color: white;
+}`
+
+const StatsContainer = styled.div`{
+  @media screen and (max-width: 767px) {
+    width: 500px;
+  }
 }`
 
 export default function PokeDetails() {  
@@ -126,11 +143,11 @@ export default function PokeDetails() {
               <PokeImages normal={data.getPokemon.sprite} normalBack={data.getPokemon.backSprite} shiny={data.getPokemon.shinySprite} shinyBack={data.getPokemon.shinyBackSprite} />
               <PokeTypes typenames={data.getPokemon.types}/>
               <BasicData pokeHeight={data.getPokemon.height} pokeWeight={data.getPokemon.weight} pokeGender={data.getPokemon.gender} />
-              <div>
+              <StatsContainer>
                 <DataHeading heading='Base Stats' />
                 <PokeStats stats={data.getPokemon.baseStats}/>
                 <Alignment><CardSubtitle>Stats Total: {data.getPokemon.baseStatsTotal}</CardSubtitle></Alignment>
-              </div>
+              </StatsContainer>
             </DetailsContainer>
 
             <DataContainer color1={data.getPokemon.types[0].name.toLowerCase()} color2={ data.getPokemon.types.length === 2 ? data.getPokemon.types[1].name.toLowerCase() : data.getPokemon.types[0].name.toLowerCase()}>

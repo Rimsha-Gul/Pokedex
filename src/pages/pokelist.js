@@ -12,13 +12,38 @@ const Container = styled.div` {
   font-family: sans-serif;
   justify-items: center;
   padding: 0px;
+
+  @media only screen and (min-width: 940px) {
+    align-items: center;
+    justify-items: center;
+   }
 }`;
 
 const CardWrapper = styled.div` {
   display: grid;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
   grid-gap: 20px;
   justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+
+  @media only screen and (min-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+   
+  @media only screen and (min-width: 940px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
 }`;
 
 export default function PokeList() {

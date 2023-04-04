@@ -23,6 +23,10 @@ const Card = styled.a` {
       transform: scale(1.04);
       transition: all 0.3s ease-in-out;
     }
+
+    @media only screen and (max-width: 640px) {
+      width: 240px;
+    }
 }`;
 
 export default function PokeCard({pokeKey, pokeTypeNames, pokeNum, PokeImg}) {

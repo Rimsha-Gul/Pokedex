@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const PokeSearchBar = styled.div` {
-    margin: 0 auto;
     width: 480px;
     height: 24px;
     margin: 24px auto;
@@ -12,6 +11,10 @@ const PokeSearchBar = styled.div` {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: 640px) {
+      width: 300px;
+    }
   }`;
 
   const SearchInput = styled.input` {
