@@ -39,7 +39,7 @@ const CardWrapper = styled.div` {
     grid-gap: 20px;
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1520px) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 20px;
